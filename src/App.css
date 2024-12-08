@@ -1,0 +1,655 @@
+/* Общие стили */
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+
+h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #000000;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+a {
+  color: #006600;
+  text-decoration: underline;
+}
+a:hover {
+  color: #009900;
+  text-decoration: none;
+}
+
+
+/* Стили для шапки */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #171717;
+}
+
+.logo-svg {
+  transition: filter 0.3s ease;
+}
+
+.logo-svg:hover {
+  filter: saturate(150%);
+}
+
+.cart a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+/* Стили для футера */
+.footer {
+  background-color: #171717;
+  color: #ffffff;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.footer-content {
+  text-align: center;
+}
+
+/* Стили для секций */
+.section {
+  margin-bottom: 40px;
+}
+
+/* Стили для новостей */
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.news-item {
+  color: #000000;
+  background-color: #ffffff;
+  padding: 40px;
+  transition: transform 0.3s ease;
+}
+
+.news-item:hover {
+  transform: translateY(-10px);
+}
+
+.news-item h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+/* Стили для каталога */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+.product-card {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+}
+
+.product-card img {
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.product-card h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #000000;
+}
+
+.product-card p {
+  font-size: 20px;
+  color: #009900;
+  font-weight: bold;
+}
+
+/* Стили для доставки и оплаты */
+.delivery {
+  background-color: #ffffff;
+  padding: 40px;
+  color: #000000;
+}
+
+.delivery h2 {
+  color: #000000;
+}
+
+/* Стили для контактов */
+.contacts {
+  background-color: #ffffff;
+  padding: 40px;
+  color: #000000;
+}
+
+.contacts h2 {
+  color: #000000;
+}
+
+/* Форма заказа */
+.order-form-page {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.order-form-page h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #000000;
+  text-align: center;
+}
+
+.order-form {
+  display: grid;
+  gap: 20px;
+}
+
+.form-group {
+  display: grid;
+  gap: 5px;
+}
+
+.form-group label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.btn-submit {
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #009900;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+  background-color: #006600;
+}
+
+/* Burger */
+.burger {
+  display: block;
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
+}
+
+.line {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+.navigation {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 25%;
+  height: 100vh;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  z-index: 20;
+}
+
+.navigation.open {
+  transform: translateX(0);
+}
+
+.navigation ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navigation li {
+  margin: 10px 0;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navigation a:hover {
+  color: #009900;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  color: #000;
+  cursor: pointer;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 15;
+}
+
+.overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Часы */
+.clock {
+  color: #fff;
+  font-weight: bold;
+  font-size: 32pt;
+}
+
+/* Общие стили для форм */
+.form-container {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+}
+
+.form-container h2 {
+  margin-bottom: 1.5rem;
+  color: #333;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.form-submit {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #009900;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-submit:hover {
+  background-color: #007700;
+}
+
+.error-message {
+  color: #d32f2f;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Стили для LoginPage и RegisterPage */
+.auth-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 100px); /* Учитываем высоту header и footer */
+}
+
+.admin-panel {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+}
+
+.admin-panel h2 {
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.admin-button {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.admin-button:hover {
+  background-color: #45a049;
+}
+
+.admin-button.delete {
+  background-color: #f44336;
+}
+
+.admin-button.delete:hover {
+  background-color: #d32f2f;
+}
+
+.admin-section {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.admin-section h3 {
+  color: #444;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.admin-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.admin-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.admin-list-item:last-child {
+  border-bottom: none;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+button[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.edit-form {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.edit-form button {
+  margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  .admin-list-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .admin-list-item div {
+    margin-top: 10px;
+  }
+}
+
+.admin-list-item {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+
+.admin-list-item p {
+  margin: 5px 0;
+}
+
+.admin-list-item strong {
+  font-weight: bold;
+}
+
+
+
+
+body {
+  background-color: #f5f5f5; /* Нежный серый фон */
+  color: #333; /* Серый цвет для текста */
+}
+
+.header,
+.footer {
+  background-color: #333;
+  color: #fff;
+}
+
+.btn-submit {
+  background-color: #333;
+  color: #fff;
+}
+
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.product-card h3, 
+.news-item h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.product-card p {
+  font-size: 16px;
+  color: #333; /* Убрать яркий цвет цены */
+}
+
+
+.section {
+  margin-bottom: 20px;
+}
+
+.product-card,
+.news-item {
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.app {
+  padding-top: 20px;
+}
+
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    padding: 8px;
+    font-size: 14px;
+}
+
+.form-group label {
+    font-size: 14px;
+    color: #666;
+}
+
+
+.burger {
+  display: block;
+  cursor: pointer;
+}
+
+
+.navigation a {
+  color: #333;
+  text-decoration: none;
+}
+
+.btn-submit {
+  padding: 8px 16px;
+  font-size: 16px;
+  border-radius: 2px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+}
+
+
+/* Стили для шапки */
+.header {
+  width: 100%; /* Во всю ширину экрана */
+  padding: 10px 20px;
+  background-color: #333; /* Темный фон */
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0; /* Убираем скругления */
+}
+
+.header .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: normal;
+  transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+  color: #ddd; /* Светлый оттенок при наведении */
+}
